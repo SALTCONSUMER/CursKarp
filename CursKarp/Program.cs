@@ -10,10 +10,11 @@ namespace CursKarp
     {
         static void Main(string[] args)
         {
+            int n = 0;
             while (true)
             {
                 Console.WriteLine("Введите n");
-                int n = 0;
+                
                 try
                 {
                     n = Int32.Parse(Console.ReadLine());
@@ -29,8 +30,10 @@ namespace CursKarp
                     Console.WriteLine("Введите число от 1 до 2147483647");
                     continue;
                 }
+                break;
+            }
 
-                int[] nums = new int[n];
+            int[] nums = new int[n];
                 Console.WriteLine("Введите числа последовательности построчно");
                 int index = 0;
                 while  (index < n)
@@ -59,8 +62,7 @@ namespace CursKarp
                     }
                     Console.WriteLine();
                 }
-                break;
-            }
+               
 
         }
 
