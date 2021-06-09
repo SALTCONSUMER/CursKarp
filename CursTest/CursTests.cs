@@ -8,7 +8,7 @@ namespace CursTest
     public class CursTests
     {
         [TestMethod]
-        public void TestMethod1()
+        public void BuildMatr_CreateTriangulaMatrixFromSequenceAndCompareWithRigthTriangularMatrix_CreatedMaxtrixIsEqualToRigthTriangularMatrix()
         {
             int[,] Matr = new int[3, 3];
             int[] nums = { 3, 4, 5 };//последовательность
@@ -26,11 +26,11 @@ namespace CursTest
 
         }
         [TestMethod]
-        public void TestMethod2()//завальный тест
+        public void SortMatr_SortingMatrixAndCompareWithWrongSortedMatrix_CreatedMatrixIsNotEqualToWrongSortedMatrix()//завальный тест
         {
             int[,] Matr = { { 1, 3, 6 }, { 0, 2, 5 }, { 0, 0, 3 } };
             int[] nums = { 1, 2, 3 };//последовательность
-            int[,] test1 = { { 6, 3, 1 }, { 5, 2, 0 }, { 3, 0, 0 } };//правильная матрица
+            int[,] test1 = { { 6, 1, 3 }, { 5, 2, 0 }, { 3, 0, 0 } };//правильная матрица
             Program.SortMatr(3, ref Matr);
             for (int i = 0; i < 3; i++)
             {
